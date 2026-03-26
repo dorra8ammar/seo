@@ -1,0 +1,15 @@
+# Créer un .gitignore à la racine
+echo "node_modules/" > .gitignore
+echo ".env" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.pyc" >> .gitignore
+echo "db.sqlite3" >> .gitignore
+echo ".DS_Store" >> .gitignore
+
+# Supprimer node_modules du suivi (optionnel)
+git rm -r --cached frontend/node_modules/
+
+# Commit et push
+git add .gitignore
+git commit -m "Ajout .gitignore"
+git push
